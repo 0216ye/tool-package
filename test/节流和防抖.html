@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流和防抖</title>
+</head>
+<body>
+    <button id ="throttle">函数节流</button>
+    <button id="debounce">函数防抖</button>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.20/lodash.js"></script>
+    <script>
+        //自定义节流和防抖
+        //返回处理节流函数的工具函数
+        function throttle (callback,time){
+            let pre = 0 //上一次调用时的时间 , 0 -->保证第一次一定调用
+            return function (event){//真正调用的函数 this为触发事件的标签
+                const current = Date.now()
+                if ( current - pre > time){//间隔 > 指定时间，才调用真正函数执行
+                    callback.call(this,event)
+                    // callback(event)
+                    //调用后，将上次调用的时间重置为当前时间
+                    pre = current
+                }
+            }
+        }
+
+          //返回处理防抖函数的工具函数
+          function debounce (callback,time){
+            return function (event){
+
+                if (callback.hasOwnProperty("timeoutId")){
+                    clearTimeout(callback.timeoutId)
+                }
+                
+                callback.timeoutId =  setTimeout(() => {
+                    //真正调用函数处理事件
+                    callback.call(this,event)
+                    //事件处理完成，清除标识
+                    delete callback.timeoutId
+                },time)
+            }
+          }
+    </script>
+    <script>
+        function fn (event){
+            console.log("处理事件",this,event)
+        }
+        document.getElementById("throttle").onclick = throttle(fn,2000)
+        document.getElementById("debounce").onclick = debounce(fn,2000)
+    </script>
+</body>
+</html>
