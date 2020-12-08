@@ -1,8 +1,14 @@
 {
-  "name": "tool",
+  "name": "0216tool_xiaoye",
   "version": "1.0.0",
   "main": "dist/yeyongjie.js",
+  "description": "叶永洁自定义工具函数库",
+  "keywords": ["atguigu", "utils", "array", "object", "function", "promise", "axios"],
   "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+
   "devDependencies": {
     "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0"
