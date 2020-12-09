@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call_apply_bind</title>
+</head>
+<body>
+    
+   <script src="../dist/yeyongjie.js"></script>
+
+    <script>
+        const obj = {m:1}
+        function fn (a,b){
+            console.log(a,b,this)
+            return a+b
+        }
+        xiaoYe.call(fn,obj,2,3) //相当于 obj.fn(a,b)
+        xiaoYe.apply(fn,obj,[2,3])
+        xiaoYe.bind(fn,obj,12,3)()
+    </script>
+</body>
+</html>

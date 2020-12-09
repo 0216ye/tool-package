@@ -1,4 +1,4 @@
-export function apply (fn,obj , ...args){
+export function apply (fn,obj , args){
     //当第一个参数没有传时，this为window
     if ( obj === null || obj === undefined ){
         obj = window

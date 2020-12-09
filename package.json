@@ -6,7 +6,7 @@
   "keywords": ["atguigu", "utils", "array", "object", "function", "promise", "axios"],
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --watch"
   },
 
   "devDependencies": {
