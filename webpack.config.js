@@ -9,7 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'yeyongjie.js',
         // filename: 'yeyongjie.min.js', //生产环境压缩包
-        library: 'xiaoYe',
+        library: 'xiaoYe', //向外暴露的对象名称
         libraryTarget: 'umd' //针对es / cms 模块化通用
     }
 }

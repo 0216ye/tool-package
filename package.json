@@ -1,6 +1,6 @@
 {
   "name": "0216tool_xiaoye",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/yeyongjie.js",
   "description": "叶永洁自定义工具函数库",
   "keywords": ["atguigu", "utils", "array", "object", "function", "promise", "axios"],

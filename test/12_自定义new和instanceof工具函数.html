@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_自定义new和instanceof工具函数</title>
+</head>
+<body>
+    <script src="../dist/yeyongjie.js"></script>
+    <script>
+        function Fn (name,age){
+            this.name = name
+            this.age = age
+        }
+        let p = new Fn('叶',12)
+        console.log(p)
+        console.log(Fn)
+        console.log(Fn.prototype)
+        let p2 =  xiaoYe.newInstance(Fn,'叶',12)
+        console.log(p2,p2.name) 
+    </script>
+</body>
+</html>

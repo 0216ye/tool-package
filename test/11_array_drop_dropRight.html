@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除指定个数的左右边元素个数</title>
+</head>
+
+<body>
+    <script src="../dist/yeyongjie.js"></script>
+    <script>
+        /*
+        1. drop(array, count):
+            得到当前数组过滤掉左边count个后剩余元素组成的数组
+            说明: 不改变当前数组, count默认是1
+            如: drop([1,3,5,7], 2) ===> [5, 7]
+        2. dropRight(array, count):
+            得到当前数组过滤掉右边count个后剩余元素组成的数组
+            说明: 不改变当前数组, count默认是1
+            如: dropRight([1,3,5,7], 2) ===> [1, 3]*/
+
+        const arr = [1,3,5,7] 
+        console.log(xiaoYe.drop(arr,2))   
+        console.log(xiaoYe.drop(arr,4))   
+        console.log(xiaoYe.drop(arr))   
+
+        console.log(xiaoYe.dropRight(arr,2))   
+        console.log(xiaoYe.dropRight(arr,4))   
+        console.log(xiaoYe.dropRight(arr))   
+
+    </script>
+</body>
+
+</html>
