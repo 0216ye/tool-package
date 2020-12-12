@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深拷贝</title>
+</head>
+<body>
+    <script src="../dist/yeyongjie.js"></script>
+    <script>
+        /*
+        实现深拷贝
+        1). 大众乞丐版
+            问题1: 函数属性会丢失
+            问题2: 循环引用会出错 -->超出最大调用栈,内存溢出
+        2). 面试基础版本
+            解决问题1: 函数属性还没丢失
+        3). 面试加强版本
+            解决问题2: 循环引用正常
+        4). 面试加强版本2(优化遍历性能)
+            数组: while | for | forEach() 优于 for-in | keys()&forEach() 
+            对象: for-in 与 keys()&forEach() 差不多
+        */
+
+        const obj = {
+            a:1,
+            b:[1,2,3],
+            c:{C:1},
+            d : function (){}
+        }
+
+        //循环引用
+        obj.b.push(obj.c)
+        obj.c.D = obj.b
+
+        // const cloneObj = xiaoYe.deepClone1(obj)
+        // const cloneObj = xiaoYe.deepClone2(obj)
+        const cloneObj = xiaoYe.deepClone3(obj)
+        // const cloneObj = xiaoYe.deepClone4(obj)
+        console.log(cloneObj, obj.b === cloneObj.b, )
+    </script>
+</body>
+</html>

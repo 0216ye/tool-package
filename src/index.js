@@ -18,4 +18,16 @@ export { differences } from './array/difference'
 export { mergeArray } from './array/mergeArray'
 export { pull,pullAll } from './array/pull'
 export { drop,dropRight } from './array/drop'
+
 export { newInstance} from './object/newInstance'
+export { myInstanceof} from './object/myInstanceof'
+export { mergeObject} from './object/mergeObject'
+export { clone1,clone2} from './object/clone'
+export { deepClone1,deepClone2,deepClone3,deepClone4 } from './object/deepClone'
+
+export { reverseString,palindrome,truncate} from './string/index'
+
+export { default as Promise} from './promise/index'
+export { default as PubSub} from './pub-sub/index'
+export { default as axios} from './axios/index'
+export { default as eventBus} from './event-bus/index'

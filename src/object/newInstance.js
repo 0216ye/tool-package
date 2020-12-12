@@ -15,6 +15,6 @@ export function newInstance(Fn, ...args) {
        return result
    }
     //将obj的__proto__指向Fn的原型对象
-    obj.__proto__ = Fn.prototype 
+    obj.__proto__ = Fn.prototype  //将构造函数的显示原型属性赋值给实例对象的隐式原型属性
     return obj
 }
