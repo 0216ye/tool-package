@@ -237,6 +237,11 @@ array-back@^4.0.1:
   resolved "https://registry.npm.taobao.org/array-back/download/array-back-4.0.1.tgz#9b80312935a52062e1a233a9c7abeb5481b30e90"
   integrity sha1-m4AxKTWlIGLhojOpx6vrVIGzDpA=
 
+atguigu-utils@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/atguigu-utils/-/atguigu-utils-1.2.2.tgz#fcfe08b285ccbcb4ec5692cce7ef1d9e8576a308"
+  integrity sha512-J3/boxTeR1FPLYuIWan3hKwx33CCcj0sYyDftg95r3of8w9xcSP202npOXtEyH3RoUOLmWelkEUYwD6Hf2vQLA==
+
 browserslist@^4.14.5:
   version "4.15.0"
   resolved "https://registry.npm.taobao.org/browserslist/download/browserslist-4.15.0.tgz?cache=0&sync_timestamp=1606864324024&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbrowserslist%2Fdownload%2Fbrowserslist-4.15.0.tgz#3d48bbca6a3f378e86102ffd017d9a03f122bdb0"

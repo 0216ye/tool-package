@@ -23,7 +23,6 @@ export function deepClone1 (target){
 
 export function deepClone2 (target){
     if ( Array.isArray(target) || ( target !== null && typeof target === 'object' )){
-
         let cloneTarget = Array.isArray(target) ? [] : {}
         for (const key in target) {
             if ( target.hasOwnProperty(key)) {
@@ -31,7 +30,6 @@ export function deepClone2 (target){
             }
         }
         return cloneTarget
-
     }else{
         return target
     }
