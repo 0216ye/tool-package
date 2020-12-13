@@ -1,5 +1,6 @@
+
+//自定义栈:后进先出,
 function Stack (){
-    
     const arr = []
     //进栈
     this.push = function (item){

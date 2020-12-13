@@ -8,36 +8,49 @@
 </head>
 <body>
   <script src="../../../node_modules/atguigu-utils/dist/atguigu-utils.js"></script>
-  <script src="../../../dist/190719-utils.js"></script>
+  <script src="../../../dist/yeyongjie.js"></script>
   <script>
     /* 
-    利用自定义队列实现击鼓传花游戏函数
+    利用自定义队列实现击鼓传花游戏函数-->返回胜利的元素和下标
+      数：4
+      从数组元素第一个为1，第四个为4，喊4的就删除，一个周期是4，到4后，后续又从4元素的后面开始喊 :1 
     */
     function passGame(names, number) {
       // 创建一个空的queue
-      const queue = new aUtils.Queue()
       // 将数组中所有元素(name和index)依次放入queue
-      names.forEach((name, index) => {
-        queue.enqueue({name, index})
-      });
 
       // 只队列的size大于1
-      while(queue.size()>1) {
         // 将队列的前number-1元素依次转移到队列的最后
-        for (let index = 0; index < number-1; index++) {
-          queue.enqueue(queue.dequeue())
-        }
         // 删除队头的元素
-        queue.dequeue()
       }
       // 最后剩下的那个就是目标
-      const {name, index} = queue.front() 
-      alert(`胜利的人是${name}, 他是第${index + 1}个人`)
-    }
 
-    // 测试
-    var names = ['A','B','C','D','E']
-    passGame(names, 4)
+    
+
+    function passGame1 (names,number){  
+      //创建队列容器
+      const queue = new xiaoYe.Queue()
+
+      //遍历数组，将其添加到队列中
+      names.forEach((name,index) => {
+          queue.enqueue({name,index})
+      });
+
+      //不断循环队列，直到队列中只有一个元素(胜利者),游戏结束
+      while (queue.size() > 1){
+         //循环nunber-1个周期:以4为例,只需要将数组前三个由入队列到出队列,然后删除队列头元素即可完成游戏任务
+        for (let index = 0; index < number-1; index++) {
+          //将队列头删除并插入队列尾
+          queue.enqueue(queue.dequeue())
+        }
+        queue.dequeue()
+      }
+      alert(`胜利者为${queue.front().name},他是第${queue.front().index + 1}个`)
+     
+      
+    }  
+    var names = ['A','B','C','D','E']  
+    passGame1(names, 3)
   </script>
 </body>
 </html>

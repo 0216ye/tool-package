@@ -33,4 +33,6 @@ export { default as axios} from './axios/index'
 export { default as eventBus} from './event-bus/index'
 
 export { default as Stack } from './da/stack'
-
+export { default as PriorityQueue } from './da/priority-queue'
+export { default as Queue } from './da/queue'
+export { bubbleSort,insertSort,selectSort} from './da/sort'
