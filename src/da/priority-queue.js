@@ -3,10 +3,8 @@
  */
 function PriorityQueue (){
     const arr = []
-
     this.enqueue = function (data,priority){
         const element = {data,priority}
-        
         //如果数组为空，直接添加
         if ( arr.length === 0 ){
             arr.push(element)

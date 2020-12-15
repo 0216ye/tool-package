@@ -42,3 +42,22 @@ export function insertSort (array){
     }
     return array
 }
+// //插入排序
+// function insertSort2 (array){
+//     //默认第一个已经排好序
+//     for (let i = 1; i < array.length; i++) {
+//         const start = array[i]        
+//         let j 
+//         for ( j = i-1; j >= 0; j--) {
+//             if ( array[j] > start){
+//                 array[j + 1] = array[j]
+//             }else{
+//                 break
+//             }
+//         }
+//         array[j+1] = start
+//     }
+
+//     return array
+// }
+// console.log(insertSort2([1,5,2,6,8]))
